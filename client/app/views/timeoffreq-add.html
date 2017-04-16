@@ -1,0 +1,51 @@
+<form role="form">
+  <div class="form-group">
+    <label for="title" class="control-label">Name</label>
+    <input type="text" ng-model="timeoff.name" class="form-control" id="title" placeholder="Enter your name here">
+  </div>
+
+ <div class="form-group">
+    <label for="title" class="control-label">Office Location</label>
+    <input type="text" ng-model="timeoff.location" class="form-control" id="title" placeholder="Enter your office location here, Chico, Yuba, Redding, or Colusa">
+  </div>
+
+<h1>Advanced Request For Time Off</h1>
+
+  <div class="form-group">
+    <label for="title" class="control-label">I am Requesting time off for the following:</label>
+    <input type="text" ng-model="timeoff.applyto" class="form-control" id="title" placeholder="Vacation(paid), Sick Leave(paid), Jury Duty(not paid), Vote (not paid), Bereavement, FMLA, Maternity Leave, Subpoena (not paid), Other (not paid)">
+  </div>
+
+  <div class="form-group">
+    <label for="title" class="control-label">Dates away from work:</label>
+    <input type="text" ng-model="timeoff.dateawayfrm" class="form-control" id="title" placeholder="What day will your time off begin?">
+     <input type="text" ng-model="timeoff.dateawayto" class="form-control" id="title" placeholder="What day will your time off end?">
+  </div>
+
+
+<h1>Absense Report</h1>
+
+
+<div class="form-group">
+    <label for="title" class="control-label">Absent dates away from work:</label>
+    <input type="text" ng-model="timeoff.absensefrm" class="form-control" id="title" placeholder="What day will your time off begin?">
+     <input type="text" ng-model="timeoff.absenseto" class="form-control" id="title" placeholder="What day will your time off end?">
+  </div>
+
+  <div class="form-group">
+    <label for="title" class="control-label">For a total of how many days:</label>
+    <input type="text" ng-model="timeoff.daytotal" class="form-control" id="title" placeholder="What day will your time off begin?">
+     <input type="text" ng-model="timeoff.hourtotal" class="form-control" id="title" placeholder="What day will your time off end?">
+  </div>
+
+<div class="form-group">
+    <label for="title" class="control-label">Please apply my absense to: </label>
+    <input type="text" ng-model="timeoff.applyto" class="form-control" id="title" placeholder="Vacation(paid), Sick Leave(paid), Jury Duty(not paid), Other (not paid)">
+  </div>
+
+
+
+
+
+  <input type="submit" class="btn btn-primary" ng-click="saveTimeoff()" value="Save">
+</form>

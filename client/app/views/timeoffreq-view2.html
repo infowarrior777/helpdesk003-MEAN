@@ -1,0 +1,25 @@
+<a class="btn btn-primary" href="/#/create/timeoffreq"><span class="glyphicon glyphicon-plus"></span> Make a new Time Off Request</a>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr><th>Time Off Request Name</th>
+    <th>Request Date</th>
+    <th>Edit/Delete</th>
+  </tr></thead>
+  <tbody>
+    <tr ng-repeat="times in timeoff">
+      <td><a ng-href="/#/timeoffreq/{{ times._id }}">{{ times.name }}</a></td>
+      <td>{{ times.date }}</td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#/timeoffreq/{{ times._id }}/edit" class="btn btn-default">
+            <span class="glyphicon glyphicon-edit"></span>
+          </a>
+          <a ng-href="/#/timeoffreq/{{ times._id }}/delete" class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

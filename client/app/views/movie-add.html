@@ -1,0 +1,31 @@
+<form role="form">
+  <div class="form-group">
+    <label for="title" class="control-label">Name</label>
+    <input type="text" ng-model="movie.title" class="form-control" id="title" placeholder="Enter your name here">
+  </div>
+
+ <div class="form-group">
+    <label for="title" class="control-label">Office Location</label>
+    <input type="text" ng-model="movie.location" class="form-control" id="title" placeholder="Enter your office location here, Chico, Yuba, Redding, or Colusa">
+  </div>
+
+
+
+  <div class="form-group">
+    <label for="title" class="control-label">Attach Video URL</label>
+    <input type="text" ng-model="movie.url" class="form-control" id="title" placeholder="Paste Video URL here">
+  </div>
+  <div class="form-group">
+    <label for="title" class="control-label">Explain Your Issue</label>
+    <input type="text" ng-model="movie.issue" class="form-control" id="title" placeholder="Explain your issue here">
+  </div>
+
+<div class="form-group">
+    <label for="title" class="control-label">Priority Level</label>
+    <input type="text" ng-model="movie.priority" class="form-control" id="title" placeholder="Please tell us if this is a High Priority problem or if you can wait and how long you can wait until this needs resolution">
+  </div>
+
+
+
+  <input type="submit" class="btn btn-primary" ng-click="saveMovie()" value="Save">
+</form>

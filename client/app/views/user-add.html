@@ -1,0 +1,35 @@
+<form role="form">
+  <div class="form-group">
+    <label for="title" class="control-label">UserName</label>
+    <input type="text" ng-model="user.username" class="form-control" id="title" placeholder="Enter UserName here">
+  </div>
+
+ <div class="form-group">
+    <label for="title" class="control-label">Password</label>
+    <input type="text" ng-model="user.password" class="form-control" id="title" placeholder="Enter Password here">
+  </div>
+
+
+
+  <div class="form-group">
+    <label for="title" class="control-label">First Name</label>
+    <input type="text" ng-model="user.firstname" class="form-control" id="title" placeholder="First Name Here">
+  </div>
+  <div class="form-group">
+    <label for="title" class="control-label">Last Name</label>
+    <input type="text" ng-model="user.lastname" class="form-control" id="title" placeholder="last name here">
+  </div>
+
+<div class="form-group">
+    <label for="title" class="control-label">email</label>
+    <input type="text" ng-model="user.email" class="form-control" id="title" placeholder="Email here">
+  </div>
+
+<div class="form-group">
+    <label for="title" class="control-label">Authorization Level</label>
+    <input type="text" ng-model="user.auth" class="form-control" id="title" placeholder="Enter Authorization Level here">
+  </div>
+
+
+  <input type="submit" class="btn btn-primary" ng-click="saveUser()" value="Save">
+</form>

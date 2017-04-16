@@ -1,0 +1,40 @@
+<!--
+
+<p>This is the login view.</p>
+
+
+<!-- LOGIN FORM 
+	<form action="/login" method="post">
+		<div class="form-group">
+			<label>Email</label>
+			<input type="text" class="form-control" name="email">
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<input type="password" class="form-control" name="password">
+		</div>
+
+		<button type="submit" class="btn btn-warning btn-lg">Login</button>
+	</form>
+
+	<hr>
+
+	<p>Need an account? <a href="/signup">Signup</a></p>
+	<p>Or go <a href="/">home</a>.</p>
+
+	-->
+
+
+
+	<h1>Login</h1>
+
+<p>
+	<input ng-model="user.username"/></br>
+	<input ng-model="user.password" type="password"/></br>
+	<button ng-click="login(user)">Login</button>
+</p>
+
+<p>Login or Register with:</p>
+
+<a href="/auth/facebook?returnTo={{'/profile'}}" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
+

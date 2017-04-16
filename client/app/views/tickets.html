@@ -1,0 +1,25 @@
+<a class="btn btn-primary" href="/#/create/ticket"><span class="glyphicon glyphicon-plus"></span> Create Ticket</a>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr><th>Ticket Name</th>
+    <th>Ticket status</th>
+    <th>Edit/Delete</th>
+  </tr></thead>
+  <tbody>
+    <tr ng-repeat="ticket in tickets">
+      <td><a ng-href="/#/ticket/{{ ticket._id }}">{{ ticket.name }}</a></td>
+      <td>{{ ticket.status }}</td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#/ticket/{{ ticket._id }}/edit" class="btn btn-default">
+            <span class="glyphicon glyphicon-edit"></span>
+          </a>
+          <a ng-href="/#/ticket/{{ ticket._id }}/delete" class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

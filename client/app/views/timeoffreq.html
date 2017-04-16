@@ -1,0 +1,111 @@
+<div class="container">
+	<h1><center><u>Time Off Request / Report Form</u></center></h1>
+    	
+	<h3>Employee Name:</h3><input type="text" name="fname" ng-model="timeoff.name"> 
+	<h3>Office Location:</h3>
+	<select ng-model="timeoff.location">
+		<option value="chico">Chico Office</option>
+		<option value="colusa">Colusa Office</option>
+		<option value="redding">Redding Office</option>
+		<option value="yubacity">Yuba City Office</option>
+	</select>
+
+	<h2><u>ADVANCE REQUEST FOR TIME OFF:</u></h2>
+	<h4>I am requesting time-off for the following:</h4>
+	  <div>
+		<div ng-model="timeoff.advanced" ng-repeat="employee in employees">
+			<div class="action-checkbox">
+				<input id="{{employee.name}}" type="checkbox" value="{{employee.name}}" ng-checked="selection.indexOf(employee.name) > -1" ng-click="toggleSelection(employee.name)" />
+				<label for="{{employee.name}}"></label>
+				{{employee.name}}
+			</div>
+		</div>
+
+         <div class="selected-items-panel">
+	      <span style="color:Blue;" class="selected-item">Selected Items:<span>
+		   <div ng-repeat="name in selection" class="selected-item">
+		    {{name}}
+		   </div>
+	     </div>
+
+
+	  </div>
+
+
+	<h4>(NOTE: Medical appointments should be requested as "sick leave")</h4>
+
+	<h3>Date(s) away from work:</h3>
+	 
+<div >
+
+	<input id="datepicker1" ng-model="timeoff.dateawayfrm"/> 	 	to   	<input id="datepicker2" ng-model="timeoff.dateawayto" /><p>
+
+	<hr>
+	<h2><u>Absence Report</u></h2>
+	I was absent from <input id="datepicker3" ng-model="timeoff.absensefrm" />   		to   	<input id="datepicker4" ng-model="timeoff.absenseto"/> for a total of <input type="textbox" name="absent_days" ng-model="timeoff.daytotal"> day(s), # of hours <input type="textbox" name="absent_hours" ng-model="timeoff.hourtotal"><p><p>
+
+
+</div>
+ 
+
+	Please apply to: 
+	<div ng-model="timeoff.applyto" ng-repeat="option in applyto">
+			<div class="action-checkbox">
+				<input id="{{option.option}}" type="checkbox" value="{{option.option}}" ng-checked="selection.indexOf(option.option) > -1" ng-click="toggleSelection(option.option)" />
+				<label for="{{option.option}}"></label>
+				{{option.option}}
+			</div>
+		</div>
+
+		<div class="selected-items-panel">
+	      <span style="color:Blue;" class="selected-item">Selected Items:<span>
+		   <div ng-repeat="option in selection" class="selected-item">
+		    {{option}}
+		   </div>
+	     </div>
+
+	<h4>Reason for Absence:</h4><textarea rows="4" cols="50" ng-model="timeoff.absensereason"></textarea><br>
+
+	<h3>Absence was reported to: </h3><input type="textarea" name="absense_reported_to" ng-model="timeoff.absensereportedto">  VIA <input type="textarea" name="absence_via">  on <input id="datepicker5" ng-model="timeoff.absensereporteddate">
+
+	<hr>
+
+	<h2><u>BUY OUT/PAY OUT:</u></h2>  Vacation Hours: <input type="textarea" name="buyout_vacation" ng-model="timeoff.buyoutvaca">  Sick Leave Hours:  <input type="textarea" name="buyout_sickleave" ng-model="timeoff.boyoutsick"><p>
+
+<p>
+	<h4>Employee Signature</h4> <input type="textarea" name="employee_signature" ng-model="timeoff.signature">
+	<h4>Date</h4><input id="datepicker6" ng-model="timeoff.date"/>
+</p>
+	
+
+	<!-- Datepicker start -->
+
+	
+
+	<!-- Datepicker end -->
+	<button type="button" class="btn btn-primary" ng-click="saveTimeoff()" value="Save">Submit</button>
+	<button type="button" class="btn btn-default">Reset</button>
+
+
+	<br>
+	<br>
+	{{timeoff.name}}
+	<br>
+	{{timeoff.location}}
+<div>
+	
+    <div class="selected-items-panel">
+
+	    <span style="color:Blue;" class="selected-item">Selected Items:<span>
+
+		<div ng-repeat="name in selection" class="selected-item">
+		  {{name}}
+		</div>
+
+	</div>
+
+
+</div>
+{{datea}}
+
+</div><!-- end of container-fluid -->
